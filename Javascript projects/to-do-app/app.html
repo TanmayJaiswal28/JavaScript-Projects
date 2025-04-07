@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">TaskFlow</h1>
+            <ul class="nav-links">
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="index.html">Sign Up</a></li>
+                <li><a href="app.html">App</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container app-container">
+        <div class="app-header">
+            <h2>Your Productivity Hub</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <span class="stat-value" id="totalTasks">0</span>
+                    <span class="stat-label">Total Tasks</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="completedTasks">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" 
+                       id="taskInput" 
+                       placeholder="What's your next achievement?"
+                       class="task-input">
+                <button id="addTask" class="btn-primary">
+                    <i class="fas fa-plus"></i> Add Task
+                </button>
+            </div>
+            <div class="task-options">
+                <select id="prioritySelect" class="task-input">
+                    <option value="low">⭐ Low Priority</option>
+                    <option value="medium">⭐⭐ Medium Priority</option>
+                    <option value="high">⭐⭐⭐ High Priority</option>
+                </select>
+                <input type="date" id="dueDate" class="task-input">
+            </div>
+        </div>
+
+        <ul class="task-list" id="taskList"></ul>
+        <div id="emptyState" class="empty-state">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgZmlsbD0iI2VlZSIvPjwvc3ZnPg==" 
+                 alt="No tasks" 
+                 class="empty-illustration">
+            <h3>Nothing to do! 🎉</h3>
+            <p>Start by adding your first task</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
